@@ -1,0 +1,27 @@
+{
+  "name": "thalaatha",
+  "version": "1.0.0",
+  "description": "Backend counterpart to Fiorito | Granblue Frantasy Raidfinder",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bgtdinh/thalaatha.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bgtdinh/thalaatha/issues"
+  },
+  "homepage": "https://github.com/bgtdinh/thalaatha#readme",
+  "dependencies": {
+    "axios": "^0.25.0",
+    "dotenv": "^14.3.2",
+    "express": "^4.17.2",
+    "needle": "^3.0.0",
+    "socket.io": "^4.4.1"
+  }
+}
