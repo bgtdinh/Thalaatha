@@ -19,7 +19,7 @@ const io = socketIo(server);
 
 //post streams
 const rulesURL = 'https://api.twitter.com/2/tweets/search/stream/rules';
-const streamURL = 'https://api.twitter.com/2/tweets/search/stream?expansions=author_id';
+const streamURL = 'https://api.twitter.com/2/tweets/search/stream?tweet.fields=created_at&expansions=author_id';
 
 const rules = [{value:'(I need backup!)'}, {value:'(Battle ID)'}];
 
@@ -109,7 +109,7 @@ io.on('connection', (socket) => {
   console.log('Client connected');
 });
 
-// streamTweets();
+streamTweets();
 
 
 server.listen(port, () => console.log(`Listening on: http://${host}:${port}`));
