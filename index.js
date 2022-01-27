@@ -12,7 +12,12 @@ const host = process.env.HOST;
 const app = express();
 
 const server = http.createServer(app);
-const io = socketIo(server);
+const io = socketIo(server, {
+  cors: {
+    origin: 'http://localhost:3000',
+    methods: ['GET', 'POST'],
+  }
+});
 
 
 
@@ -99,6 +104,7 @@ const streamTweets = () => {
     try {
         const json = JSON.parse(data);
         console.log(json);
+        io.emit('tweet', json);
     } catch (error) {
 
     }
