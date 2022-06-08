@@ -88,7 +88,7 @@ const deleteTwitterRules = (currentRules) => {
 
 // getTwitterRules();
 
-// deleteTwitterRules(['1486150262548877313', '1486150262548877312']);
+// deleteTwitterRules(['1486224962901839875']);
 
 // setTwitterRules();
 
@@ -103,7 +103,7 @@ const streamTweets = () => {
   stream.on('data', (data) => {
     try {
         const json = JSON.parse(data);
-        console.log(json);
+        // console.log(json);
         io.emit('tweet', json);
     } catch (error) {
 
